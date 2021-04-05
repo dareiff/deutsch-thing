@@ -31,6 +31,7 @@ export default function Home() {
     useEffect(() => {
         randomWord();
     }, []);
+    
     return (
         <div className={styles.container}>
             <Head>
