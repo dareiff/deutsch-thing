@@ -5914,5 +5914,6 @@ export default (req, res) => {
     // send back the original randomWord
     res.json({
         word: randomWordKey,
+        translation: translationOfWord,
     });
 };
