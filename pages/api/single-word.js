@@ -5908,10 +5908,11 @@ function randomNumber() {
 export default (req, res) => {
     const randomNumberd = randomNumber();
     const randomWord = deutschWords[randomNumberd];
+    const randomWordKey = Object.keys(randomWord)[0];
     const translationOfWord = Object.entries(randomWord)[1];
     res.statusCode = 200;
     // send back the original randomWord
     res.json({
-        word: randomWord,
+        word: randomWordKey,
     });
 };
