@@ -15,8 +15,8 @@ export default function Home() {
 
     const randomWord = async () => {
         await fetch('/api/giveWord')
-            .then(res => res.json())
-            .then(res => {
+            .then((res) => res.json())
+            .then((res) => {
                 console.log(res.word);
                 const theWord = Object.keys(res.word);
                 const theTranslation = res.word[theWord[0]];
@@ -31,12 +31,12 @@ export default function Home() {
     useEffect(() => {
         randomWord();
     }, []);
-    
+
     return (
         <div className={styles.container}>
             <Head>
                 <title>Deutsch Thing</title>
-                <link rel='icon' href='/favicon.ico' />
+                <link rel="icon" href="/favicon.ico" />
             </Head>
 
             <h1>{word.word}</h1>
